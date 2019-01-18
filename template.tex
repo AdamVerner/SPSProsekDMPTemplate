@@ -1,0 +1,321 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% @Author: Adam Verner
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing essay content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt,a4paper]{article} % Default font size is 12pt, it can be changed here
+
+% right should be 2, but that behaves weridly
+% copied from LibreOffice
+\usepackage[left=3cm, right=3cm, top=-1cm, bottom=2cm,includehead,includefoot]{geometry} 
+
+
+
+% header & footer START
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Střední průmyslová škola na Proseku}
+\rhead{26-41-M/01 Elektrotechnika}
+\renewcommand{\headrulewidth}{0.4pt}
+% header & footer STOP
+
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\baselinestretch}{1.5} % line spacing
+
+\usepackage[nottoc,numbib]{tocbibind}  % include bibliography
+
+
+\usepackage{hyperref}
+
+\usepackage{geometry} % Required to change the page size to A4
+\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+
+\usepackage{graphicx} % Required for including pictures
+
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{mathptmx}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+
+
+\setlength\parindent{35pt}  % odrazeni odstavce
+
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+
+% use packages to support czech
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+\begin{minipage}{0.15\textwidth}
+	\includegraphics[height=\textwidth]{Praha_logo.eps}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\includegraphics[height=\textwidth]{SPS-Prosek_logo.jpg}
+\end{minipage}
+\begin{adjustbox}{minipage=0.55\textwidth,left}
+	\textbf{\textcolor{darkgray}{
+	Střední průmyslová škola na Proseku\\
+	90 00 Praha 9, Novoborská 2}}
+\end{adjustbox}
+
+\center
+
+\textbf{\large OBOR}\\[0.5cm]
+\textbf{\large	26-41-M/01 ELEKTROTECHNIKA\\
+				(ŠVP: Průmyslová automatizace a inteligentní budovy)}\\[4.5cm]
+\textbf{\LARGE MATURITNÍ PROJEKT}\\[1.5cm]
+\textsc{TÉMA PRÁCE}\\[1.5cm]
+\textbf{\color{red} \huge \bfseries  TÉMA PROJEKTU (ČERVENÝ TEXT NAHRAĎTĚ)}
+
+\vspace*{\fill}
+
+\begin{minipage}{0.49\textwidth}
+\begin{flushleft} \large
+\the\year % insert current year
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+\begin{flushright}
+\textcolor{red}{\large AUTOR (PŘÍJMENÍ Jméno)}
+\end{flushright}
+\end{minipage}
+
+
+\end{titlepage}
+
+
+\newgeometry{left=3cm, right=3cm, top=1.25cm, bottom=2.5cm,includehead,includefoot}
+
+
+%----------------------------------------------------------------------------------------
+%	LIST SE ZADÁNÍM
+%----------------------------------------------------------------------------------------
+\textbf{\color{red} \LARGE MÍSTO TOHOTO LISTU VLOŽTE LIST SE ZADÁNÍM}
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	PROHLÁŠENÍ
+%----------------------------------------------------------------------------------------
+\section*{PROHLÁŠENÍ}
+
+{Prohlašuji, že jsem svou maturitní práci vypracoval samostatně a použil jsem pouze podklady (literaturu, projekty, SW, atd.) uvedené v seznamu.
+}\\
+
+{Nemám závažný důvod proti užití tohoto školního díla ve smyslu § 60 zákona č. 121/2000 Sb., o právu autorském, o právech souvisejících s právem autorským a o změně některých zákonů (autorský zákon).}\\[0.5cm]
+
+\begin{minipage}{0.49\textwidth}
+\begin{flushleft}
+{V Praze dne \today}\\% insert current year
+\bigskip
+\bigskip
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+\begin{flushright}
+\centering
+{
+..........................................\\
+podpis
+}
+\end{flushright}
+\end{minipage}
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	PODĚKOVÁNÍ
+%----------------------------------------------------------------------------------------
+\textsc{\textbf{\fontsize{20pt}{0}\selectfont poděkování}}\\
+
+{\color{red} Text poděkování …. Běžně se děkuje rodinným příslušníkům za jejich morální podporu, vedoucí práce za její vedení, dalším konkrétním učitelům a konzultantům za věcné připomínky atd.}
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	ANOTACE
+%----------------------------------------------------------------------------------------
+\section*{ANOTACE}
+
+\begin{table}[htb]
+
+	\begin{tabular}{|p{0.3\linewidth}|p{0.65\linewidth}|} \hline
+	Jméno autora          & \\ \hline
+	Název maturitní práce & {\color{red} Musí se shodovat s oficiálním názvem práce v zadání}										\\ \hline
+	Rozsah práce          & {\color{red} Počet stran práce ve formátu (např. 165 s. + 50 s. příloh)}									\\ \hline
+	Školní rok vyhotovení & 2019 \\ \hline
+	Škola                 & Střední průmyslová škola na Proseku \\ \hline
+	Vedoucí práce         & \\ \hline
+	Využití práce         & {\color{red} Zde popište použití práce, např. výukové účely v oboru Telekomunikace v předmětu tom a tom}					\\ \hline
+	Abstrakt              & {\color{red} Např. Práce je zaměřena na návrh webové aplikace pro evidenci ...} \\ \hline
+	Klíčová slova         & {\color{red} Zde uveďte klíčová slova práce, tj. slova, která definují její obsah, např. webové stránky, skriptovací jazyky, syntaxe,...} \\ \hline
+	\end{tabular}
+\end{table}
+\newpage
+%----------------------------------------------------------------------------------------
+%	ANNOTATIONS
+%----------------------------------------------------------------------------------------
+\section*{ANNOTATION}
+
+\begin{table}[htb]
+	\begin{tabular}{|p{0.3\linewidth}|p{0.65\linewidth}|} \hline
+	Autor                    &							\\ \hline
+	Title of graduation work &							\\ \hline
+	Extend                   & {\color{red} e.g.: 165 p. + 50 p. of appendices}	\\ \hline
+	Academic year            & 2019							\\ \hline
+	School                   & Střední průmyslová škola na Proseku			\\ \hline
+	Supervisor               &							\\ \hline
+	Application              &							\\ \hline
+	Abstrakt                 &							\\ \hline
+	Key words                &                          \\ \hline 
+	\end{tabular}
+\end{table}
+
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Include a table of contents
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTIONlipsum
+%----------------------------------------------------------------------------------------
+
+\section{Úvod} % Major section
+
+{\color{red} Text}
+
+%------------------------------------------------
+
+\subsection{Část 1} % Sub-section
+
+{\color{red} Název kapitol bez teček a každá na nové stránce.}\\\\
+\lipsum[1] % Dummy text
+Example citation \cite{1}.
+
+%------------------------------------------------
+
+\subsection{Část 2} % Sub-section
+
+\lipsum[2] % Dummy text
+
+%------------------------------------------------
+
+\subsubsection{Podčást 1} % Sub-sub-section
+
+\lipsum[3] % Dummy text
+
+\begin{figure}[H] % Example image
+\center{\includegraphics[width=0.5\linewidth]{placeholder}}
+\caption{ukázkový obrázek.}
+\label{fig:speciation}
+\end{figure}
+
+%------------------------------------------------
+
+\subsubsection{Podčást 2} % Sub-sub-section
+
+\lipsum[4] % Dummy text
+
+%----------------------------------------------------------------------------------------
+%	MAJOR SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Zápletka} % Major section
+
+\lipsum[5] % Dummy text
+
+%------------------------------------------------
+
+\subsection{Část 1} % Sub-section
+
+\subsubsection{Podčást 1} % Sub-sub-section
+
+\lipsum[6] % Dummy text
+
+%------------------------------------------------
+
+\subsubsection{Podčást 2} % Sub-sub-section
+
+
+%------------------------------------------------
+
+\subsubsection{Podčást  3} % Sub-sub-section
+
+\begin{description} % Numbered list example
+
+\item[První] \hfill \\
+\lipsum[9] % Dummy text
+
+\item[Druhý] \hfill \\
+\lipsum[10] % Dummy text
+
+\item[Třetí] \hfill \\
+\lipsum[11] % Dummy text
+
+\end{description} 
+
+%----------------------------------------------------------------------------------------
+%	MAJOR SECTION X - TEMPLATE - UNCOMMENT AND FILL IN
+%----------------------------------------------------------------------------------------
+
+%\section{Content Section}
+
+%\subsection{Subsection 1} % Sub-section
+
+% Content
+
+%------------------------------------------------
+
+%\subsection{Subsection 2} % Sub-section
+
+% Content
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+
+\section{Závěr} % Major section
+
+\lipsum[12]
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+\bibitem[1]{1} Seznam citací dle ISO 690 (např. dle \url{www.boldis.cz/citace/citace2.pdf})
+\bibitem[2]{2} Nebo dle generátoru citací na \url{www.citace.com}
+ 
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
+
