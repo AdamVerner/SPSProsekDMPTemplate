@@ -104,10 +104,10 @@
       {\gdef\@usage}%
       {\@usage}}
 
-\newcommand*\abstarct{%
+\newcommand*\abstrakten{%
    \@ifnextchar\bgroup
-      {\gdef\@abstarct}%
-      {\@abstarct}}
+      {\gdef\@abstrakten}%
+      {\@abstrakten}}
 
 \newcommand*\keywords{%
    \@ifnextchar\bgroup
@@ -169,7 +169,7 @@
 			(ŠVP: Průmyslová automatizace a inteligentní budovy)}\\[4.5cm]
 		\textbf{\LARGE MATURITNÍ PROJEKT}\\[1.5cm]
 		\textsc{TÉMA PRÁCE}\\[1.5cm]
-		\textbf{\color{red} \huge \bfseries  TÉMA PROJEKTU (ČERVENÝ TEXT NAHRAĎTĚ)}
+		\textbf{\huge \bfseries \@temacz}
 
 	\par
 	}
@@ -183,7 +183,7 @@
 	\end{minipage}
 	\begin{minipage}{0.49\textwidth}
 	\begin{flushright}
-	\textcolor{red}{\large AUTOR (PŘÍJMENÍ Jméno)}
+	\textcolor{red}{\large \@creator }
 	\end{flushright}
 	\end{minipage}
 		
@@ -233,6 +233,41 @@
 	\newpage
 }
 
+\newcommand{\makeanotation}[1]{
+	\section*{ANOTACE}
+	\begin{table}[htb]
+	\begin{tabular}{|p{0.3\linewidth}|p{0.65\linewidth}|} \hline
+	Jméno autora          & \@creator \\ \hline
+	Název maturitní práce & \@temacz \\ \hline
+	Rozsah práce          & \pageref*{LastPage} s. \\ \hline
+	Školní rok vyhotovení & \the\year \\ \hline
+	Škola                 & Střední průmyslová škola na Proseku \\ \hline
+	Vedoucí práce         & \@supervisor \\ \hline
+	Využití práce         & \@vyuziti \\ \hline
+	Abstrakt              & \@abstrakt \\ \hline
+	Klíčová slova         & \@klicovas \\ \hline
+	\end{tabular}
+	\end{table}
+	\newpage
+
+	\section*{ANNOTATION}
+	\begin{table}[htb]
+	\begin{tabular}{|p{0.3\linewidth}|p{0.65\linewidth}|} \hline
+	Author                   & \@creator\\ \hline
+	Title of graduation work & \@tema \\ \hline
+	Extend                   & \pageref*{LastPage} s. \\ \hline
+	Academic year            & \the\year \\ \hline
+	School                   & Střední průmyslová škola na Proseku \\ \hline
+	Supervisor               & \@supervisor \\ \hline
+	Application              & \@usage \\ \hline
+	Abstract                 & \@abstrakten\\ \hline
+	Key words                & \\ \hline 
+	\end{tabular}
+	\end{table}
+
+	\newpage
+}
+
 
 \newcommand{\makebeginning}[1]{
 	\maketitle
@@ -242,6 +277,8 @@
 	\makestatement
 
 	\makethanksgiving
+
+	\makeanotation
 
 }
 
