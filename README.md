@@ -17,11 +17,19 @@ nebudou úplně košér.
  - na školních pc nejde projekt kompilovat
 
 # Building
+v repositáři je MakeFile na buildění example projektu, dá se snadno modifikovat na cokoliv jiného.
+
 ```
 make
+make clean
 ```
 
-for more see `Makefile`
+when using class from outside of repository, you have to use correct paths in documentclass and gprahicspath
+
+```LaTeX
+\documentclass[12pt,a4paper]{PathToRepository/SPSTemplate}
+\graphicspath{{path/to/repo/}}{{path/to/other/pictures/}}
+```
 
 # SPSTemplate class usage
 pro vytvoření několika úvodních stránek(titulní stránka až anotace) je potřeba
@@ -48,7 +56,7 @@ usage:
 ```LaTeX
 \reference{obsah}
 
-% poté stačí zavolat
+% poté stačí zavolat v documentu
 
 \makebeginning
 
