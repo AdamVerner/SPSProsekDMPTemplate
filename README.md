@@ -1,5 +1,13 @@
+výhody:
+	+ snadné verzování
+	+ multiplatformní( užasnej microsoftí template dělal blbosti v libreoffice)
+	+ míň překlepů a hrubek oproti ofiko vzoru
+
+	- na školních pc nejde projekt kompilovat
+
 # Building
-use command
 ```
-pdflatex -synctex=1 -interaction=nonstopmode <file>
+make
 ```
+
+for more see `Makefile`
