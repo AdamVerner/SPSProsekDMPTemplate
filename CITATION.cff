@@ -1,0 +1,12 @@
+cff-version: 1.0.3
+message: If you use this software, please cite it as below.
+authors:
+  - family-names: Verner
+    given-names: adam
+    website: averner.cz
+title: SPSProsekDMPTemplate
+version: 1.0-d7305f2
+date-released: 2019-01-1
+repository-code: github.com/AdamVerner/SPSProsekDMPTemplate
+commit:	d7305f246989b04881e5492823283a489302458f
+license: GPL-3.0
