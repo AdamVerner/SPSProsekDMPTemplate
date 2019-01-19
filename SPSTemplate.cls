@@ -11,7 +11,7 @@
 \AtEndOfClass{\RequirePackage{microtype}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions*
-\LoadClass{article}
+\LoadClassWithOptions{book}
 \RequirePackage{ifpdf}      % Needed to pick between latex and pdflatex
 
 
@@ -68,7 +68,7 @@
 %----------------------------------------------------------------------------------------
 % Translations
 %----------------------------------------------------------------------------------------
-\renewcommand{\abstractname}{Úvod}
+% \renewcommand{\abstractname}{Úvod}
 
 
 %----------------------------------------------------------------------------------------
@@ -160,7 +160,6 @@
 			Střední průmyslová škola na Proseku\\
 			190 00 Praha 9, Novoborská 2}}
 		\end{adjustbox}
-
 	{%
 	\centering	
 	
@@ -170,7 +169,6 @@
 		\textbf{\LARGE MATURITNÍ PROJEKT}\\[1.5cm]
 		\textsc{TÉMA PRÁCE}\\[1.5cm]
 		\textbf{\huge \bfseries \@temacz}
-
 	\par
 	}
 
@@ -186,20 +184,17 @@
 	\textcolor{red}{\large \@creator }
 	\end{flushright}
 	\end{minipage}
-		
-	\newpage
 
 	\newgeometry{left=3cm, right=3cm, top=1.25cm, bottom=2.5cm,includehead,includefoot}
 	}
 
-\newcommand{\makeassignmentsheet}[1]{
+\newcommand{\makeassignmentsheet}{
 	\textbf{\color{red} \LARGE MÍSTO TOHOTO LISTU VLOŽTE LIST SE ZADÁNÍM}
-
-	\newpage
 }
 
-\newcommand{\makestatement}[1]{
-	\section*{PROHLÁŠENÍ}
+\newcommand{\makestatement}{
+	\chapter*{PROHLÁŠENÍ}
+	\addcontentsline{toc}{chapter}{Prohlášení}
 
 	{Prohlašuji, že jsem svou maturitní práci vypracoval samostatně a použil jsem pouze podklady (literaturu, projekty, SW, atd.) uvedené v seznamu.
 	}\\
@@ -222,19 +217,17 @@
 	}
 	\end{flushright}
 	\end{minipage}
-
-	\newpage
 }
 
-\newcommand{\makethanksgiving}[1]{
-	\section*{PODĚKOVÁNÍ}
+\newcommand{\makethanksgiving}{
+	\chapter*{PODĚKOVÁNÍ}
+	\addcontentsline{toc}{chapter}{Poděkování}
 	\@podekovani
-
-	\newpage
 }
 
-\newcommand{\makeanotation}[1]{
-	\section*{ANOTACE}
+\newcommand{\makeanotation}{
+	\chapter*{ANOTACE}
+	\addcontentsline{toc}{chapter}{Anotace}
 	\begin{table}[htb]
 	\begin{tabular}{|p{0.3\linewidth}|p{0.65\linewidth}|} \hline
 	Jméno autora          & \@creator \\ \hline
@@ -248,9 +241,9 @@
 	Klíčová slova         & \@klicovas \\ \hline
 	\end{tabular}
 	\end{table}
-	\newpage
 
-	\section*{ANNOTATION}
+	\chapter*{ANNOTATION}
+	\addcontentsline{toc}{chapter}{Annotation}
 	\begin{table}[htb]
 	\begin{tabular}{|p{0.3\linewidth}|p{0.65\linewidth}|} \hline
 	Author                   & \@creator\\ \hline
@@ -264,22 +257,17 @@
 	Key words                & \@keywords \\ \hline 
 	\end{tabular}
 	\end{table}
-
 	\newpage
 }
 
 
-\newcommand{\makebeginning}[1]{
+\newcommand{\makebeginning}{
 	\maketitle
-
 	\makeassignmentsheet
-
 	\makestatement
-
 	\makethanksgiving
-
 	\makeanotation
-
+	
 }
 
 
