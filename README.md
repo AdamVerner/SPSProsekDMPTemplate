@@ -28,14 +28,12 @@ when using class from outside of repository, you have to use correct paths in do
 
 ```LaTeX
 \documentclass[12pt,a4paper]{PathToRepository/SPSTemplate}
-\graphicspath{{path/to/repo/}}{{path/to/other/pictures/}}
+\graphicspath{{path/to/repo/}{path/to/other/pictures/}}
 ```
 
 # SPSTemplate class usage
 pro vytvoření několika úvodních stránek(titulní stránka až anotace) je potřeba
 zadat používané parametry
-
-pri vymysleni nazvu se museli obejit vsechny uz predem dane LaTeXu interni slova
 
 
 | reference  | obsah                            |
@@ -51,6 +49,8 @@ pri vymysleni nazvu se museli obejit vsechny uz predem dane LaTeXu interni slova
 | klicovas   | klíčová slova česky              |
 | keywords   |  klíčová slova anglicky          |
 | podekovani | vedoucímu, rodičům, firmě....    |
+
+note: reference words will be subject to change in future as the curent ones look ugly
 
 usage:
 ```LaTeX

@@ -260,8 +260,8 @@
 	School                   & Střední průmyslová škola na Proseku \\ \hline
 	Supervisor               & \@supervisor \\ \hline
 	Application              & \@usage \\ \hline
-	Abstract                 & \@abstrakten\\ \hline
-	Key words                & \\ \hline 
+	Abstract                 & \@abstrakten \\ \hline
+	Key words                & \@keywords \\ \hline 
 	\end{tabular}
 	\end{table}
 
