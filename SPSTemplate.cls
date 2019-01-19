@@ -158,7 +158,7 @@
 		\begin{adjustbox}{minipage=0.55\textwidth,left}
 			\textbf{\textcolor{darkgray}{
 			Střední průmyslová škola na Proseku\\
-			90 00 Praha 9, Novoborská 2}}
+			190 00 Praha 9, Novoborská 2}}
 		\end{adjustbox}
 
 	{%
