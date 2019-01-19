@@ -1,15 +1,18 @@
+FILENAME := Example
 
-example-show: Example.pdf
-	xdg-open Example.pdf
+example-show: $(FILENAME).pdf
+	xdg-open $(FILENAME).pdf
 
-Example.pdf: SPSTemplate.cls Example.tex
-	pdflatex -synctex=1 -interaction=nonstopmode Example.tex
+$(FILENAME).pdf : template/SPSTemplate.cls $(FILENAME).tex
+	pdflatex -synctex=1 -interaction=nonstopmode $(FILENAME).tex
+
+.PHONY: regen
+
+regen:
+	rm -f $(FILENAME).pdf
+	make example-show
 
 .PHONY: clean
 
 clean:
 	rm -f *.aux *.log *.out *.pdf *.synctex.gz *.dvi *.toc
-
-clean-log:
-
-	rm -f *.aux *.log *.out *.synctex.gz *.dvi *.toc
