@@ -11,7 +11,7 @@
 \AtEndOfClass{\RequirePackage{microtype}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions*
-\LoadClassWithOptions{book}
+\LoadClass[oneside,a4paper,12pt]{book}
 \RequirePackage{ifpdf}      % Needed to pick between latex and pdflatex
 
 
@@ -142,24 +142,25 @@
 %----------------------------------------------------------------------------------------
 % maketitle command
 %----------------------------------------------------------------------------------------
-
+\usepackage{tabularx}
 \renewcommand{\maketitle}{
 	
 	\thispagestyle{empty} % turn of numbering
 	\newgeometry{left=3cm, right=3cm, top=-1cm, bottom=2.5cm,includehead,includefoot}
-		
 
-		\begin{minipage}{0.15\textwidth}
-			\includegraphics[height=\textwidth]{Pictures/Praha_logo.eps}
-		\end{minipage}
-		\begin{minipage}{0.3\textwidth}
-			\includegraphics[height=\textwidth]{Pictures/SPS-Prosek_logo.jpg}
-		\end{minipage}
-		\begin{adjustbox}{minipage=0.55\textwidth,left}
-			\textbf{\textcolor{darkgray}{
-			Střední průmyslová škola na Proseku\\
-			190 00 Praha 9, Novoborská 2}}
-		\end{adjustbox}
+	\begin{tabular}{ m{0.15\textwidth} m{0.3\textwidth} m{0.55\textwidth} }
+		\centering
+		\includegraphics[width=0.15\textwidth,keepaspectratio]{Pictures/Praha_logo.eps}
+		& 
+		\includegraphics[width=0.3\textwidth,keepaspectratio]{Pictures/SPS-Prosek_logo.jpg} 
+		& 
+		\textbf{\textcolor{darkgray}{
+			Střední průmyslová škola na Proseku \newline
+			190 00 Praha 9, Novoborská 2}
+		}
+		\\
+	\end{tabular}
+
 	{%
 	\centering	
 	

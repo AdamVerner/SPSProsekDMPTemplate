@@ -3,7 +3,7 @@ FILENAME := Example
 example-show: $(FILENAME).pdf
 	xdg-open $(FILENAME).pdf
 
-$(FILENAME).pdf : template/SPSTemplate.cls $(FILENAME).tex
+$(FILENAME).pdf : SPSTemplate.cls $(FILENAME).tex
 	pdflatex -synctex=1 -interaction=nonstopmode $(FILENAME).tex
 
 .PHONY: regen
