@@ -35,7 +35,7 @@
 \usepackage{adjustbox}
 \usepackage{xcolor}
 \usepackage{fancyhdr} % header and footer
-\usepackage{hyperref}
+\usepackage[unicode]{hyperref}
 \usepackage{graphicx} % Required for including pictures
 \usepackage{lastpage} % total number of pages
 
