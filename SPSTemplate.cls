@@ -182,7 +182,7 @@
 	\end{minipage}
 	\begin{minipage}{0.49\textwidth}
 	\begin{flushright}
-	\textcolor{red}{\large \@creator }
+	{\large \@creator }
 	\end{flushright}
 	\end{minipage}
 
