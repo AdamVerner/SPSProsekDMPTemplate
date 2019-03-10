@@ -21,7 +21,7 @@
 % MARGINS	
 %----------------------------------------------------------------------
 % right should be 2, but that behaves weridly
-\usepackage[left=3cm, right=3cm, top=1.25cm, bottom=2cm,includehead,includefoot]{geometry} 
+\usepackage[left=3cm, right=3cm, top=1.25cm, bottom=2cm,includehead,includefoot]{geometry}
 
 
 %----------------------------------------------------------------------------------------
@@ -35,9 +35,9 @@
 \usepackage{adjustbox}
 \usepackage{xcolor}
 \usepackage{fancyhdr} % header and footer
-\usepackage[unicode]{hyperref}
 \usepackage{graphicx} % Required for including pictures
 \usepackage{lastpage} % total number of pages
+\usepackage[unicode]{hyperref}
 
 
 %----------------------------------------------------------------------------------------
@@ -63,7 +63,18 @@
 \lhead{Střední průmyslová škola na Proseku}
 \rhead{26-41-M/01 Elektrotechnika}
 \renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14.5pt}
 
+
+%----------------------------------------------------------------------------------------
+% Make hyperlinks look normal
+%----------------------------------------------------------------------------------------
+\hypersetup{
+    colorlinks,
+    linkcolor=blue,
+    urlcolor=blue
+}
+\urlstyle{same}
 
 %----------------------------------------------------------------------------------------
 % Translations
@@ -209,8 +220,6 @@
 
 \newcommand{\makestatement}{
 	\chapter*{PROHLÁŠENÍ}
-	\addcontentsline{toc}{chapter}{Prohlášení}
-
 	{Prohlašuji, že jsem svou maturitní práci vypracoval samostatně a použil jsem pouze podklady (literaturu, projekty, SW, atd.) uvedené v seznamu.
 	}\\
 
@@ -236,13 +245,11 @@
 
 \newcommand{\makethanksgiving}{
 	\chapter*{PODĚKOVÁNÍ}
-	\addcontentsline{toc}{chapter}{Poděkování}
 	\@podekovani
 }
 
 \newcommand{\makeanotation}{
 	\chapter*{ANOTACE}
-	\addcontentsline{toc}{chapter}{Anotace}
 	\begin{table}[htb]
 	\begin{tabular}{|p{0.3\linewidth}|p{0.65\linewidth}|} \hline
 	Jméno autora          & \@creator \\ \hline
@@ -258,7 +265,6 @@
 	\end{table}
 
 	\chapter*{ANNOTATION}
-	\addcontentsline{toc}{chapter}{Annotation}
 	\begin{table}[htb]
 	\begin{tabular}{|p{0.3\linewidth}|p{0.65\linewidth}|} \hline
 	Author                   & \@creator\\ \hline
