@@ -285,11 +285,15 @@
 \newcommand{\makebeginning}{
 	\maketitle
 	\makeassignmentsheet
-\afterpage{\blankpage}
-\makestatement
+	\afterpage{\blankpage}
+	\makestatement
 	\makethanksgiving
 	\makeanotation
-	
+
+	% this is intentionally put here, so that the headings of chapters from abstract to
+	% conclusion are changed, but not the rest of the document
+	\titleformat{\chapter}[display]{\normalfont\bfseries}{}{10pt}{\Huge\thechapter.\quad}
+
 }
 
 
