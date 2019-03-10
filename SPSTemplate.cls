@@ -287,6 +287,7 @@
 	\makeassignmentsheet
 	\afterpage{\blankpage}
 	\makestatement
+	\setcounter{page}{1}
 	\makethanksgiving
 	\makeanotation
 
