@@ -72,6 +72,18 @@
 
 
 %----------------------------------------------------------------------------------------
+% inserting blank pages
+%----------------------------------------------------------------------------------------
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+
+%----------------------------------------------------------------------------------------
 % Variables
 %----------------------------------------------------------------------------------------
 \newcommand*\supervisor{%
@@ -186,6 +198,8 @@
 	\end{flushright}
 	\end{minipage}
 
+	\afterpage{\blankpage}
+
 	\newgeometry{left=3cm, right=3cm, top=1.25cm, bottom=2.5cm,includehead,includefoot}
 	}
 
@@ -265,7 +279,8 @@
 \newcommand{\makebeginning}{
 	\maketitle
 	\makeassignmentsheet
-	\makestatement
+\afterpage{\blankpage}
+\makestatement
 	\makethanksgiving
 	\makeanotation
 	
